@@ -4,7 +4,21 @@
 
 <beans>
 	<bean id="triangle" class="org.jmagero.springDemo.Triangle">
-			<constructor-arg  index ="0" value="Equilateral"/>
-			<constructor-arg index="1" value="20"/>
+		<property name="pointA" ref="zeroPoint"/>
+		<property name="pointB" ref="firstPoint"/>
+		<property name="pointC" ref="secondPoint"/>
 	</bean>
+	<bean id="zeroPoint" class="org.jmagero.springDemo.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="0"/>
+   </bean>
+	<bean id="firstPoint" class="org.jmagero.springDemo.Point">
+		<property name="x" value="-20"/>
+		<property name="y" value="0"/>
+   </bean>
+	<bean id="secondPoint" class="org.jmagero.springDemo.Point">
+		<property name="x" value="20"/>
+		<property name="y" value="0"/>
+   </bean>
+
 </beans>
