@@ -1,33 +1,22 @@
 package org.jmagero.springDemo;
 
-public class Triangle {
-	private Point pointA;
-	private Point pointB;
-	private Point pointC;
+import java.util.List;
 
-	public Point getPointA() {
-		return pointA;
+public class Triangle {
+	private List<Point> points;
+	
+	public List<Point> getPoints() {
+		return points;
 	}
-	public void setPointA(Point pointA) {
-		this.pointA = pointA;
-	}
-	public Point getPointB() {
-		return pointB;
-	}
-	public void setPointB(Point pointB) {
-		this.pointB = pointB;
-	}
-	public Point getPointC() {
-		return pointC;
-	}
-	public void setPointC(Point pointC) {
-		this.pointC = pointC;
+
+	public void setPoints(List<Point> points) {
+		this.points = points;
 	}
 
 	public void draw() {
-		System.out.print("Point A ( " + getPointA().getX() + ", " + getPointA().getY() + " ) " +
-						"Point B ( " + getPointB().getX() + ", " + getPointB().getY() + " ) " +
-						"Point C ( " + getPointC().getX() + ", " + getPointC().getY() + " ) ");
+		for(Point point : points) {
+			System.out.print("Point = ( " + point.getX() + ", " + point.getY() + " ) ");
+		}
 	}
 
 }

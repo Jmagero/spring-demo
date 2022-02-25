@@ -4,19 +4,23 @@
 
 <beans>
 	<bean id="triangle" class="org.jmagero.springDemo.Triangle">
-		<property name="pointA" ref="zeroPoint"/>
-		<property name="pointB" ref="firstPoint"/>
-		<property name="pointC" ref="secondPoint"/>
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint" />
+				<ref bean="point2"/>
+				<ref bean="point3"/>
+			</list>
+		</property>
 	</bean>
 	<bean id="zeroPoint" class="org.jmagero.springDemo.Point">
 		<property name="x" value="0"/>
 		<property name="y" value="0"/>
    </bean>
-	<bean id="firstPoint" class="org.jmagero.springDemo.Point">
+	<bean id="point2" class="org.jmagero.springDemo.Point">
 		<property name="x" value="-20"/>
 		<property name="y" value="0"/>
    </bean>
-	<bean id="secondPoint" class="org.jmagero.springDemo.Point">
+	<bean id="point3" class="org.jmagero.springDemo.Point">
 		<property name="x" value="20"/>
 		<property name="y" value="0"/>
    </bean>
